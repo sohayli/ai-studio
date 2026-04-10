@@ -2,5 +2,9 @@ services:
   ai-studio:
     build: .
     ports:
-      - "3000:3000"
+      - "85:3000"
     restart: unless-stopped
+    environment:
+      - AI_API_URL=${AI_API_URL}
+      - AI_API_KEY=${AI_API_KEY}
+      - AI_MODEL=${AI_MODEL}
